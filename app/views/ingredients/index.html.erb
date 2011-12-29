@@ -1,0 +1,9 @@
+<div id="ingredients"></div>
+
+<script type="text/javascript">
+  $(function() {
+    // ingredient is the app name
+    window.router = new Blog2.Routers.IngredientsRouter({ingredients: <%= @ingredients.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>
